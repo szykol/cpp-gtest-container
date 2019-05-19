@@ -1,0 +1,16 @@
+// See https://aka.ms/vscode-remote/devcontainer.json for format details.
+{
+	"name": "C++",
+	"dockerFile": "Dockerfile",
+	"extensions": [
+		"ms-vscode.cpptools",
+		"vector-of-bool.cmake-tools",
+		"twxs.cmake"
+	],
+	"runArgs": [
+		"--cap-add=SYS_PTRACE",
+		"--security-opt",
+		"seccomp=unconfined"
+	],
+	"postCreateCommand": "git clone https://github.com/google/googletest.git"
+}
